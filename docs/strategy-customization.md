@@ -124,7 +124,7 @@ def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame
 
 Most indicators have an instable startup period, in which they are either not available, or the calculation is incorrect. This can lead to inconsistencies, since Freqtrade does not know how long this instable period should be.
 To account for this, the strategy can be assigned the `startup_candle_count` attribute.
-This should be set to the maximum number of candles that the strategy requires to calculate stable indicators.
+This should be set to the minimum number of candles that the strategy requires to calculate stable indicators.
 
 In this example strategy, this should be set to 100 (`startup_candle_count = 100`), since the longest needed history is 100 candles.
 
